@@ -1,0 +1,80 @@
+HomeActivityTest:
+Menampilkan List data Movies 
+	- Memastikan rv_movies dalam keadaan tampil.
+	- Gulir rv_movies ke posisi data terakhir.
+	
+ContentActivityTest:
+	Menampilkan data detail Movie
+		- Memberi tindakan klik pada data ketiga di rv_movies
+		- Memastikan collapsing dalam keadaan tampil.
+		- Memastikan data title yang  tampil sesuai yang diharapkan
+		- Memastikan data webpage yang  tampil sesuai yang diharapkan
+		- Memastikan image_view tampil
+		- Memastikan tv_genre tampil
+		- Memastikan tv_date_release tampil
+		- Memastikan data tv_date_release yang  tampil sesuai yang diharapkan
+		- Memastikan tv_story_line tampil	
+		- Memastikan data tv_story_line yang  tampil sesuai yang diharapkan 
+
+HomeActivityTest:
+Menampilkan List data Tv Shows 
+	- Memastikan rv_movies dalam keadaan tampil.
+	- Gulir rv_movies ke posisi data terakhir.
+	
+ContentActivityTest:		
+	Menampilkan data detail Tv Shows
+		- Memberi tindakan klik pada data ketiga di rv_tv_shows
+		- Memastikan collapsing dalam keadaan tampil.
+		- Memastikan data title yang  tampil sesuai yang diharapkan
+		- Memastikan data webpage yang  tampil sesuai yang diharapkan
+		- Memastikan image_view tampil
+		- Memastikan tv_genre tampil
+		- Memastikan tv_date_release tampil
+		- Memastikan data tv_date_release yang  tampil sesuai yang diharapkan
+		- Memastikan tv_story_line tampil	
+		- Memastikan data tv_story_line yang  tampil sesuai yang diharapkan 
+
+HomeActivityTest:		
+Menampilkan List data Movies Favourite
+	- Memastikan rv_movies dalam keadaan tampil.
+	- Gulir rv_movies ke posisi data terakhir.
+	
+ContentActivityTest:
+	Menampilkan data detail Movie Favourite
+	- Memastikan rv_movies dalam keadaan tampil.
+	- Memberi tindakan klik pada data kedua di rv_movies
+	- Memberi tindakan klik pada data kedua di fab_add_to_favorite
+	- Memberi tindakan klik pada data kedua di favoriteFragment2
+	- Memberi tindakan klik pada data ke - 0 di rv_movies
+	- Memastikan collapsing dalam keadaan tampil.
+	- Memastikan data title yang  tampil sesuai yang diharapkan
+	- Memastikan data webpage yang  tampil sesuai yang diharapkan
+	- Memastikan image_view tampil
+	- Memastikan tv_genre tampil
+	- Memastikan tv_date_release tampil
+	- Memastikan data tv_date_release yang  tampil sesuai yang diharapkan
+	- Memastikan tv_story_line tampil	
+	- Memastikan data tv_story_line yang  tampil sesuai yang diharapkan 
+
+HomeActivityTest:
+Menampilkan List data Tv Shows Favourite 
+	- Memastikan rv_movies dalam keadaan tampil.
+	- Gulir rv_movies ke posisi data terakhir.
+	
+ContentActivityTest:		
+	Menampilkan Detail data Tv Shows 
+	- Memberi tindakan klik pada data ketiga di rv_tv_shows
+	- Memastikan rv_tv_shows dalam keadaan tampil.
+	- Memberi tindakan klik pada data kedua di rv_tv_shows
+	- Memberi tindakan klik pada data kedua di fab_add_to_favorite
+	- Memberi tindakan klik pada data kedua di favoriteFragment2
+	- Memberi tindakan klik pada data ke - 0 di rv_tv_shows
+	- Memastikan collapsing dalam keadaan tampil.
+	- Memastikan data title yang  tampil sesuai yang diharapkan
+	- Memastikan data webpage yang  tampil sesuai yang diharapkan
+	- Memastikan image_view tampil
+	- Memastikan tv_genre tampil
+	- Memastikan tv_date_release tampil
+	- Memastikan data tv_date_release yang  tampil sesuai yang diharapkan
+	- Memastikan tv_story_line tampil	
+	- Memastikan data tv_story_line yang  tampil sesuai yang diharapkan 

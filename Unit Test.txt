@@ -1,0 +1,55 @@
+MoviesViewModelTest
+Memuat List:
+	- Memastikan data list movies tidak null.
+	- Memastikan jumlah data movies sesuai dengan yang diharapkan.
+	
+TvShowViewModelTest
+Memuat List:
+	- Memastikan data list Tv Shows tidak null.
+	- Memastikan jumlah data Tv Shows sesuai dengan yang diharapkan.
+	
+ContentViewModelTest
+Memuat Detail Movie: 
+	- Memastikan data detail Movie tidak null
+	- Memastikan data detail Movie sesuai dengan yang diharapkan.
+	
+Memuat Tv Show: 
+	- Memastikan data detail Tv Show tidak null
+	- Memastikan data detail Tv Show sesuai dengan yang diharapkan.
+	
+Mengupdate status Favourit movies:
+	- Memastikan data sesuai dengan yang diharapkan
+	
+Mengupdate status Favourit Tv Show:
+	- Memastikan data sesuai dengan yang diharapkan
+	
+Mendapatkan status Favorit Movies: 
+	- Memastikan data tidak null
+	- Memastikan data sesuai dengan yang diharapkan
+	
+Mendapatkan status Favorit Tv Shows: 
+	- Memastikan data tidak null
+	- Memastikan data sesuai dengan yang diharapkan
+
+Repositori Test
+Memuat List Movies:
+	- Memastikan data list movies tidak null.
+	- Memastikan jumlah data movies sesuai dengan yang diharapkan.
+Memuat Detail Movie: 
+	- Memastikan data detail Movie tidak null
+	- Memastikan data detail Movie sesuai dengan yang diharapkan.
+Memuat List Movies Favourite:
+	- Memastikan data list movies tidak null.
+	- Memastikan jumlah data movies sesuai dengan yang diharapkan.
+
+Memuat List Tv Show
+	- Memastikan data list Tv Showt idak null.
+	- Memastikan jumlah data Tv Show sesuai dengan yang diharapkan.
+Memuat Detail Tv Show 
+	- Memastikan data detail Tv Show tidak null
+	- Memastikan data detail Tv Show sesuai dengan yang diharapkan.
+Memuat List Tv Show Favourite:
+	- Memastikan data list Tv Show tidak null.
+	- Memastikan jumlah data Tv Show sesuai dengan yang diharapkan.
+	
+	
