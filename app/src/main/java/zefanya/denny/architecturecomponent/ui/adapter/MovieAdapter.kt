@@ -3,8 +3,10 @@ package zefanya.denny.architecturecomponent.ui.adapter
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -13,10 +15,10 @@ import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import zefanya.denny.architecturecomponent.R
+import zefanya.denny.architecturecomponent.databinding.ItemMovieBinding
 import zefanya.denny.architecturecomponent.ui.content.ContentActivity
 import zefanya.denny.core.data.source.local.entity.MovieEntity
 import zefanya.denny.core.data.source.remote.network.Net
-import zefanya.denny.core.databinding.ItemMovieBinding
 import zefanya.denny.core.domain.model.Movie
 import zefanya.denny.core.utils.ShareMoviesCallback
 
@@ -62,6 +64,7 @@ class MovieAdapter(private val callback: ShareMoviesCallback, private val source
                             .error(R.drawable.ic_baseline_error_24)
                     )
                     .into(object : CustomTarget<Bitmap>() {
+                        @RequiresApi(Build.VERSION_CODES.M)
                         override fun onResourceReady(
                             resource: Bitmap,
                             transition: Transition<in Bitmap>?
