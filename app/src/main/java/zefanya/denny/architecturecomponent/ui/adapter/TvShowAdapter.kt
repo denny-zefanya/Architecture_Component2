@@ -3,27 +3,29 @@ package zefanya.denny.architecturecomponent.ui.adapter
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
+import zefanya.denny.architecturecomponent.databinding.ItemMovieBinding
 import zefanya.denny.architecturecomponent.ui.content.ContentActivity
 import zefanya.denny.core.R
 import zefanya.denny.core.data.source.remote.network.Net
-import zefanya.denny.core.databinding.ItemMovieBinding
 import zefanya.denny.core.domain.model.TvShow
 import zefanya.denny.core.utils.ShareTvShowsCallBack
 
 class TvShowAdapter(private val callback: ShareTvShowsCallBack, private val source: Int) :
-    RecyclerView.Adapter<TvShowAdapter.tvshowsViewHolder>() {
+    RecyclerView.Adapter<TvShowAdapter.TvShowsViewHolder>() {
 
     private var listData = ArrayList<TvShow>()
 
-    inner class tvshowsViewHolder(private val binding: ItemMovieBinding) :
+    inner class TvShowsViewHolder(private val binding: ItemMovieBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(tvshow: TvShow) {
             with(binding) {
@@ -48,6 +50,7 @@ class TvShowAdapter(private val callback: ShareTvShowsCallBack, private val sour
                             .error(R.drawable.ic_baseline_error_24)
                     )
                     .into(object : CustomTarget<Bitmap>() {
+                        @RequiresApi(Build.VERSION_CODES.M)
                         override fun onResourceReady(
                             resource: Bitmap,
                             transition: Transition<in Bitmap>?
@@ -73,15 +76,15 @@ class TvShowAdapter(private val callback: ShareTvShowsCallBack, private val sour
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): tvshowsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvShowsViewHolder {
         val itemtvshowsBinding = ItemMovieBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
 
-        return tvshowsViewHolder(itemtvshowsBinding)
+        return TvShowsViewHolder(itemtvshowsBinding)
     }
 
-    override fun onBindViewHolder(holder: tvshowsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TvShowsViewHolder, position: Int) {
         val tvshow = listData[position]
         if (tvshow != null)
             holder.bind(tvshow)
