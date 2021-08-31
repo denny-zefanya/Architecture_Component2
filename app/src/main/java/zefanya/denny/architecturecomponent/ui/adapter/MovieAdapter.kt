@@ -3,10 +3,8 @@ package zefanya.denny.architecturecomponent.ui.adapter
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
-import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -64,7 +62,6 @@ class MovieAdapter(private val callback: ShareMoviesCallback, private val source
                             .error(R.drawable.ic_baseline_error_24)
                     )
                     .into(object : CustomTarget<Bitmap>() {
-                        @RequiresApi(Build.VERSION_CODES.M)
                         override fun onResourceReady(
                             resource: Bitmap,
                             transition: Transition<in Bitmap>?
