@@ -1,3 +1,5 @@
+@file:Suppress("RemoveExplicitTypeArguments")
+
 package zefanya.denny.core.data
 
 import kotlinx.coroutines.flow.*
