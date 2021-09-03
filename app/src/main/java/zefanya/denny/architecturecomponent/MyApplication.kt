@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package zefanya.denny.architecturecomponent
 
 import android.app.Application
