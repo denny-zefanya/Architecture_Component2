@@ -1,3 +1,5 @@
+@file:Suppress("RedundantWith")
+
 package zefanya.denny.architecturecomponent.ui.adapter
 
 import android.content.Intent

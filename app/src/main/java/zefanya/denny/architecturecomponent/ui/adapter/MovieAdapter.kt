@@ -1,3 +1,5 @@
+@file:Suppress("RedundantWith")
+
 package zefanya.denny.architecturecomponent.ui.adapter
 
 import android.content.Intent
@@ -6,7 +8,6 @@ import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.palette.graphics.Palette
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -15,7 +16,6 @@ import com.bumptech.glide.request.transition.Transition
 import zefanya.denny.architecturecomponent.R
 import zefanya.denny.architecturecomponent.databinding.ItemMovieBinding
 import zefanya.denny.architecturecomponent.ui.content.ContentActivity
-import zefanya.denny.core.data.source.local.entity.MovieEntity
 import zefanya.denny.core.data.source.remote.network.Net
 import zefanya.denny.core.domain.model.Movie
 import zefanya.denny.core.utils.ShareMoviesCallback
@@ -25,17 +25,7 @@ class MovieAdapter(private val callback: ShareMoviesCallback, private val source
 
     private var listData = ArrayList<Movie>()
 
-    companion object {
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<MovieEntity>() {
-            override fun areItemsTheSame(oldItem: MovieEntity, newItem: MovieEntity): Boolean {
-                return oldItem.idMovie == newItem.idMovie
-            }
-
-            override fun areContentsTheSame(oldItem: MovieEntity, newItem: MovieEntity): Boolean {
-                return oldItem == newItem
-            }
-        }
-    }
+    companion object;
 
     inner class MoviesViewHolder(private val binding: ItemMovieBinding) :
         RecyclerView.ViewHolder(binding.root) {
