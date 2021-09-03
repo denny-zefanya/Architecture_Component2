@@ -26,11 +26,7 @@ class Repository constructor(
 ) :
     ICatalogRepository {
 
-    companion object {
-        @Volatile
-        private var instance: Repository? = null
-
-    }
+    companion object;
 
     override fun getlistMovies(
         sort: String,
