@@ -25,18 +25,6 @@ object DataMapper {
         }
 
 
-    fun mapDomainToDetailMovieEntity(input: DetailMovie): DetailMovieEntity {
-        return DetailMovieEntity(
-            input.id,
-            input.poster,
-            input.title,
-            input.genre,
-            input.dateRelease,
-            input.webPage,
-            input.storyLine
-        )
-    }
-
     fun mapDetailTvShowEntityToDomain(input: List<DetailTvShowEntity>): List<DetailTvShow> =
         input.map {
             DetailTvShow(
@@ -51,31 +39,12 @@ object DataMapper {
         }
 
 
-    fun mapDomainToTvShowEntity(input: DetailTvShow): DetailTvShow {
-        return DetailTvShow(
-            input.id,
-            input.poster,
-            input.title,
-            input.genre,
-            input.dateRelease,
-            input.webPage,
-            input.storyLine
-        )
-    }
-
     fun mapMovieEntityToDomain(input: List<MovieEntity>): List<Movie> = input.map {
         Movie(it.idMovie, it.title, it.year, it.star, it.poster, it.favourite)
-    }
-
-    fun mapDomainToMovieEntity(input: List<Movie>): List<MovieEntity> = input.map {
-        MovieEntity(it.idMovie, it.title, it.year, it.star, it.poster, it.favourite)
     }
 
     fun mapTvShowEntityToDomain(input: List<TvShowEntity>): List<TvShow> = input.map {
         TvShow(it.idMovie, it.title, it.year, it.star, it.poster, it.favourite)
     }
 
-    fun mapDomainToTvShowEntity(input: List<TvShow>): List<TvShowEntity> = input.map {
-        TvShowEntity(it.idMovie, it.title, it.year, it.star, it.poster, it.favourite)
-    }
 }

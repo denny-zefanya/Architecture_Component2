@@ -10,12 +10,16 @@ object SortUtils {
         val isFavInt = if (isFav) 1 else 0
         val simpleQuery =
             StringBuilder().append("SELECT * FROM $source WHERE favourite = 1 or favourite = (1 and $isFavInt) ")
-        if (filter == MOST_POPULAR) {
-            simpleQuery.append("ORDER BY star DESC")
-        } else if (filter == LEAST_POPULAR) {
-            simpleQuery.append("ORDER BY star ASC")
-        } else if (filter == RANDOM) {
-            simpleQuery.append("ORDER BY RANDOM()")
+        when (filter) {
+            MOST_POPULAR -> {
+                simpleQuery.append("ORDER BY star DESC")
+            }
+            LEAST_POPULAR -> {
+                simpleQuery.append("ORDER BY star ASC")
+            }
+            RANDOM -> {
+                simpleQuery.append("ORDER BY RANDOM()")
+            }
         }
         return SimpleSQLiteQuery(simpleQuery.toString())
     }
